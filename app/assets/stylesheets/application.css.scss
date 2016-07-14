@@ -1,17 +1,3 @@
-//Import bootstrap-sprockets
-@import "bootstrap-sprockets";
-
-// Import cerulean variables
-@import "bootswatch/readable/variables";
-
-// Then bootstrap itself
-@import "bootstrap";
-
-// Bootstrap body padding for fixed navbar
-body { padding-top: 70px; }
-
-// And finally bootswatch style itself
-@import "bootswatch/readable/bootswatch";
-
 // Whatever application styles you have go last
 @import "base";
+@import "materialize";
