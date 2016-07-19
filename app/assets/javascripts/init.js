@@ -1,5 +1,3 @@
-$( document ).ready(function() {
-  $(function(){
+$(document).on('turbolinks:load', function() {
     $('.button-collapse').sideNav();
-  }); // end of document ready
 });
