@@ -1,0 +1,5 @@
+// Whatever application styles you have go last
+@import "base";
+@import "materialize/components/color";
+$primary-color: color("blue", "darken-2") !default;
+@import 'materialize';

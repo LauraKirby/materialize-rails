@@ -12,3 +12,7 @@
 .icon-block .material-icons {
 	font-size: inherit;
 }
+
+@media #{$small-and-down} {
+    background-color: red;
+  }
