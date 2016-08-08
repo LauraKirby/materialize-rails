@@ -1,17 +1,40 @@
-<%= form_for(user) do |f| %>
-  <% if user.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+<div class="container">
+  <%= form_for(user) do |f| %>
+    <% if user.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
 
-      <ul>
-      <% user.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
+        <ul>
+        <% user.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+
+    <%= simple_form_for @user do |f| %>
+      <div class="input-field">
+        <%= f.input :username %>
+      </div>
+
+      <div class="input-field">
+        <%= f.input :email %>
+      </div>
+
+      <div class="input-field">
+        <%= f.label :birthdate %>
+        <%= f.text_field :birthdate, class: "datepicker", placeholder: "Select Date" %>
+      </div>
+
+      <div class="input-field">
+        <%= f.input :password %>
+      </div>
+
+      <div class="actions">
+        <%= f.button :submit %>
+      </div>
+    <% end %>
+
   <% end %>
-
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+</div>
