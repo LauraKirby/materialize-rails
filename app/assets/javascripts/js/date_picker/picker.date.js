@@ -2,7 +2,7 @@
  * Date picker for pickadate.js v3.5.0
  * http://amsul.github.io/pickadate.js/date.htm
  */
-
+$(document).on('turbolinks:load', function() {
 (function ( factory ) {
 
     // AMD.
@@ -1426,5 +1426,5 @@ Picker.extend( 'pickadate', DatePicker )
 
 
 }));
-
+});
 

@@ -1,4 +1,4 @@
-(function($){
+$(document).on('turbolinks:load', function() {
   $(function(){
 
     var window_width = $(window).width();
@@ -59,23 +59,23 @@
 
 
     // BuySellAds Detection
-    var $bsa = $(".buysellads"),
-        $timesToCheck = 3;
-    function checkForChanges() {
-        if (!$bsa.find('#carbonads').length) {
-          $timesToCheck -= 1;
-          if ($timesToCheck >= 0) {
-            setTimeout(checkForChanges, 500);
-          }
-          else {
-            var donateAd = $('<div id="carbonads"><span><a class="carbon-text" href="#!" onclick="document.getElementById(\'paypal-donate\').submit();"><img src="images/donate.png" /> Help support us by turning off adblock. If you still prefer to keep adblock on for this page but still want to support us, feel free to donate. Any little bit helps.</a></form></span></div>');
+    // var $bsa = $(".buysellads"),
+    //     $timesToCheck = 3;
+    // function checkForChanges() {
+    //     if (!$bsa.find('#carbonads').length) {
+    //       $timesToCheck -= 1;
+    //       if ($timesToCheck >= 0) {
+    //         setTimeout(checkForChanges, 500);
+    //       }
+    //       else {
+    //         var donateAd = $('<div id="carbonads"><span><a class="carbon-text" href="#!" onclick="document.getElementById(\'paypal-donate\').submit();"><img src="images/donate.png" /> Help support us by turning off adblock. If you still prefer to keep adblock on for this page but still want to support us, feel free to donate. Any little bit helps.</a></form></span></div>');
 
-            $bsa.append(donateAd);
-          }
-        }
+    //         $bsa.append(donateAd);
+    //       }
+    //     }
 
-    }
-    checkForChanges();
+    // }
+    // checkForChanges();
 
 
     // Github Latest Commit
@@ -170,4 +170,4 @@
     $('.chips').material_chip();
 
   }); // end of document ready
-})(jQuery); // end of jQuery name space
+});

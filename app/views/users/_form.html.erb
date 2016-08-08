@@ -16,8 +16,11 @@
     <%= simple_form_for @user do |f| %>
       <%= f.input :username %>
       <%= f.input :email %>
-      <%= f.label :birthdate, class:"datepicker" %>
-      <%= f.text_field :birthdate, class: "birthdate-picker", placeholder: "Select Date" %>
+
+      <div class="input-field">
+        <%= f.label :birthdate %>
+        <%= f.text_field :birthdate, class: "datepicker", placeholder: "Select Date" %>
+      </div>
       <%= f.input :password %>
       <div class="actions">
         <%= f.button :submit %>
